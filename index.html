@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>5주차 과제</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Gothic+A1&display=swap" rel="stylesheet">
+	<style type="text/css">
+		body{margin: 0px;}
+		#monitor{width: 80px;height: 30px;background:black; color: white;position:fixed; top: 0;right: 0;}
+		h1{font-family: 'Gothic A1', sans-serif;font-size: 4em;font-weight: bolder;margin: auto; text-align: center;}
+		h2{font-family: 'Gothic A1', sans-serif;display: block;margin: auto;font-weight: lighter; line-height: 1.5em;}
+		p{font-family: 'Gothic A1', sans-serif;}
+		img{display: block;margin: auto;}
+		#mj0{width: 500px;animation: po1 2s;animation-iteration-count: 1;} 
+		@keyframes po1{from{left: 900px;}to{left: 100px;}} 
+		#t1{font-family: 'Roboto Slab', serif;font-size: 4em;margin-left: 600px;margin-top: 250px;animation: op1 2s;animation-iteration-count: 1;}
+		#f3{background-image: url("mj3.gif");}
+		#th{transition: all 1s;transform: rotate(0deg);}
+		@keyframes op1{from{opacity: 0;}to{opacity: 1;}}
+
+		@keyframes op2{
+			from{opacity: 1;}to{opacity: 0;}
+			}
+
+		@keyframes po2{
+			from{opacity: 0;}to{opacity: 1;}
+			}
+	</style>
+	
+</head>
+<body>
+	<div id="monitor"></div>
+	<section id="f1" style="height: 300px;position: fixed;">
+		<img src="mj.gif" id="mj0" style="position: absolute;top: 100px; left: 100px;">
+		<h1 id="t1" style="opacity: 1;">The Moon Walker.</h1>
+	</section>
+	<section id="f2" style="height: 900px;background: gray; opacity: 0;">
+		<img src="mj.jpg" style="width: 668px;position: absolute;top: 200px;">
+		<img src="mj2.gif" id="mj2" style="width: 300px;position: absolute;top: 245px; left: 1200px;">
+		<h1 style="position: absolute;top: 670px; left: 700px;">Michael Jackson</h1>
+		<h2 style="position: absolute;top: 770px; left: 700px;color: white;">팝의 황제, 세계 대중음악의 상징적인 인물.<br>1980년대 그의 등장으로 전세계 음악의 판도가 완전히 바뀌었다.</h2>
+	</section>
+		<section id="f3" style="height: 900px;">
+		<h2 style="position: relative;top: 200px; left: 30px;color: white;text-align: center;">마이클 잭슨이 등장하기 전까지 대중음악에서 흑인들은 항상 2인자였다.
+			<br>흑인 음악인 블루스에서 탄생한 로큰롤은 비롯한 거의 모든 장르에서 백인이<br>주류를 점하고 있었고. 소수의 흑인 가수들이 도전장을 내밀었지만 항상 실패로 끝났다.</h2>
+		<h1 style="position: relative;top: 500px; left: 30px;color: white;text-align: center;font-size: 2em;">	
+			하지만 마이클 잭슨의  'Thriller'가 나오면서 모든 관념이 부셔졌다.</h1>  
+		<img src="mj2.jpg" id="th" style="width: 500px;position: relative;top: 530px;left: 30px;">
+		<h2 style="position: relative;top: 560px; left: 30px;color: gray;text-align: center;"> 	
+			다양한 장르가 섞인 그의 음악은 흑인음악과 백인음악의 경계를 완벽히 허물며 팝의 흐름을 완전히 바꾸어 놓았고<br>
+			Thriller 뮤직비디오는 눈과 귀를 모두 만족시키는 '보는 음악'의 시대를 여는데 결정적 역할을 하였다.</h2>
+			<h2 style="position: relative;top: 560px; left: 30px;color: black;text-align: center;">	
+			 'Thriller'는 빌보드 차트 37주간 1위, 전세계적으로 6500만 장이 팔리며 세계에서 가장 많이 팔린 앨범이다.</h2>   
+	</section>
+	<section id="f4" style="height: 900px;background: black;">
+		<h2 id="say" style="position: relative;top: 700px; left: 30px;color: white;text-align: center;opacity: 0;"> 
+		마이클 잭슨의 등장은 한 시대를 가르는 혁명적인 등장이며 또한 완전히 다른 시대로 넘어가는 계기점이 됐다.</h2>
+		<p style="position: relative;top: 700px; left: 30px;color: white;text-align: center;">-김태훈 평론가-</p>
+		<p style="position: relative;top: 800px; left: 30px;color: white;text-align: center;">Copyrightⓒ2019 leejaebum All rights reserved.</p>
+	</section>
+	<script type="text/javascript">
+		window.onscroll = function(){
+		var t = document.documentElement.scrollTop + document.body.scrollTop;
+		monitor.innerHTML = t;
+		if(t > 200){f1.style.animation = "op2 0.5s forwards";}
+		else{f1.style.animation = "";}
+		if(t > 200){f2.style.animation = "po2 1s forwards";}
+		else{f2.style.animation = "";}
+		if(t > 1265){th.style.transform = "rotate(1080deg)";}
+		if(t > 1943){say.style.animation = "po2 3s forwards";}
+		else{say.style.animation = "";}
+		}
+		</script>
+</body>
+</html>
